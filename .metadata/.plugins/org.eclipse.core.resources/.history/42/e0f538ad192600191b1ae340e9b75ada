@@ -1,0 +1,13 @@
+package com.cg.payroll.client;
+
+import com.cg.payroll.services.PayrollServices;
+import com.cg.payroll.services.PayrollServicesImpl;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		PayrollServices services = new PayrollServicesImpl();
+
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.cg.payroll.beans;
+
+public class Associate {
+	
+	private int associateId;
+	private int yearlyInvestmentUnder80C;
+	private String firstName,lastName,department,designation,panCard,emailId;
+}

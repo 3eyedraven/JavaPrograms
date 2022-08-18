@@ -1,0 +1,19 @@
+package com.cg.payroll.client;
+
+import com.cg.payroll.exceptions.AssociateDetailNotFoundException;
+import com.cg.payroll.services.PayrollServices;
+import com.cg.payroll.services.PayrollServicesImpl;
+
+public class MainClass {
+
+	public static void main(String[] args) throws AssociateDetailNotFoundException {
+		PayrollServices services = new PayrollServicesImpl();
+		int associateId=services.acceptAssociateDetails("frank", "castle", "frank@gmail.com", "Human Resource", "Manager", "00", 100, 200, 50, 20, 8763, "Axis", "dsh23");
+				System.out.println("Associate id:-"+associateId);
+		int associateId2=services.acceptAssociateDetails("frank", "castle", "frank@gmail.com", "Human Resource", "Manager", "00", 100, 200, 50, 20, 8763, "Axis", "dsh23");
+				System.out.println("Associate id:-"+associateId2);
+		double grossSalary=services.calculateNetSalary(associateId2);
+			System.out.println(grossSalary);
+	}
+
+}

@@ -1,0 +1,7 @@
+package com.cg.banking.beans;
+
+public class Transaction {
+	private int transcationId;
+	private float amount;
+	private String transactionType;
+}

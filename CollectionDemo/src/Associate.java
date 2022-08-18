@@ -1,0 +1,54 @@
+
+public class Associate implements Comparable<Associate> {
+	private int associateId;
+	private String firstName;
+	private String lastName;
+	private double basicSalary;
+	
+	public Associate(int associateId, String firstName, String lastName, double basicSalary) {
+		super();
+		this.associateId = associateId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.basicSalary = basicSalary;
+	}
+	
+	public int getAssociateId() {
+		return associateId;
+	}
+
+	public void setAssociateId(int associateId) {
+		this.associateId = associateId;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public double getBasicSalary() {
+		return basicSalary;
+	}
+
+	public void setBasicSalary(double basicSalary) {
+		this.basicSalary = basicSalary;
+	}
+	@Override
+	public String toString() {
+		return "Associate [associateId="+associateId+"Name="+firstName+" "+lastName+" Basic Salary="+basicSalary; 
+	}
+	public int compareTo(Associate o) {
+		return this.firstName.compareTo(o.getFirstName());
+	}
+}

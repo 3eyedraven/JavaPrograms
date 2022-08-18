@@ -1,0 +1,10 @@
+package com.cg.banking.exceptions;
+
+public class InsufficientAmountException {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

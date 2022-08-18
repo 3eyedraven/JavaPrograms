@@ -1,0 +1,52 @@
+package com.cg.payroll.client;
+
+import java.util.Scanner;
+
+import com.cg.payroll.exceptions.AssociateDetailNotFoundException;
+import com.cg.payroll.services.PayrollServices;
+import com.cg.payroll.services.PayrollServicesImpl;
+
+public class MainClass {
+	
+	public static void main(String[] args) throws AssociateDetailNotFoundException {
+		PayrollServices services = new PayrollServicesImpl();
+		int associateId=services.acceptAssociateDetails("frank", "castle", "frank@gmail.com", "Human Resource", "Manager", "00", 100, 200, 50, 20, 8763, "Axis", "dsh23");
+				System.out.println("Associate id:-"+associateId);
+		System.out.println("Enter Associate's basic yearly salary, epf & company pf:");
+		Scanner sc=new Scanner(System.in);
+		double basic=sc.nextDouble();
+		double epf=sc.nextDouble();
+		double cpf=sc.nextDouble();
+		System.out.println("Associate's yearly net salary is:");
+		double netSalary=services.calculateNetSalary(basic,epf,cpf);
+		System.out.println(netSalary);
+		System.out.println("Associate's monthly net salary is: ");
+		System.out.println((float)netSalary/12);
+		System.out.println("Associate's monthly taxable amount is:");
+		double monthlyTax=taxCalculator(netSalary,epf,cpf);
+		System.out.println((int)monthlyTax/12);
+	}
+public static double taxCalculator(double netSalary, double epf, double cpf) {
+		
+		double grossSalary = netSalary+epf+cpf;
+		if (grossSalary<=250000)
+			return 0;
+		else if (grossSalary>250000 && grossSalary<=500000)
+		{
+			grossSalary=grossSalary-250000;
+			return grossSalary/10;
+		}
+		else if (grossSalary>500000 && grossSalary<=1000000)
+		{
+			grossSalary=grossSalary-500000;
+			return grossSalary/5+25000;		
+		}
+		else
+		{
+			grossSalary=grossSalary-1000000;
+			return grossSalary*(3/10)+50000+25000;
+		}
+		
+	}
+
+}

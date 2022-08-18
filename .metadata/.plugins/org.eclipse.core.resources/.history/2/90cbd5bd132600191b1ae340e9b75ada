@@ -1,0 +1,38 @@
+package com.cg.payroll.daoservices;
+
+import java.util.List;
+
+import com.cg.payroll.beans.Associate;
+
+public class AssociateDAOImpl implements AssociateDAO {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Associate save(Associate associate) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean update(Associate associate) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Associate findOne(int associateId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Associate> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

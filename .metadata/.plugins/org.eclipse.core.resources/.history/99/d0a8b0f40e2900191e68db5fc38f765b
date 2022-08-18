@@ -1,0 +1,21 @@
+package com.cg.project.readwritework;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+public class ReadWriteWork {
+	private static void byteStreamReadWrite(File fileFrom, File fileTo) throws IOException {
+		try(BufferedInputStream src = new BufferedInputStream(new FileInputStream(fileFrom))){
+			try (BufferedOutputStream dest = new BufferedOutputStream(new FileOutputStream(fileTo))){
+				byte[] dataBuffer = new byte[(int)fileFrom.lenth()];
+				src.read(dataBuffer);
+				dest.write(dataBuffer);	
+			}
+		}
+		System.out.println("File Transfer to: "+fileTo.getAbsolutePath());
+	}
+
+}

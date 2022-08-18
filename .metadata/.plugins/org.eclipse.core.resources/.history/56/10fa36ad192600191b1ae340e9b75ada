@@ -1,0 +1,58 @@
+package com.cg.payroll.beans;
+
+public class Associate {
+	
+	private int associateId;
+	private int yearlyInvestmentUnder80C;
+	private String firstName,lastName,department,designation,panCard,emailId;
+	
+	public int getAssociateId() {
+		return associateId;
+	}
+	public void setAssociateId(int associateId) {
+		this.associateId = associateId;
+	}
+	public int getYearlyInvestmentUnder80C() {
+		return yearlyInvestmentUnder80C;
+	}
+	public void setYearlyInvestmentUnder80C(int yearlyInvestmentUnder80C) {
+		this.yearlyInvestmentUnder80C = yearlyInvestmentUnder80C;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getDepartment() {
+		return department;
+	}
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+	public String getDesignation() {
+		return designation;
+	}
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
+	public String getPanCard() {
+		return panCard;
+	}
+	public void setPanCard(String panCard) {
+		this.panCard = panCard;
+	}
+	public String getEmailId() {
+		return emailId;
+	}
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
+	
+}

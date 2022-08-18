@@ -1,0 +1,41 @@
+package com.cg.payroll.services;
+
+import java.util.List;
+
+import com.cg.payroll.beans.Associate;
+import com.cg.payroll.daoservices.AssociateDAO;
+import com.cg.payroll.daoservices.AssociateDAOImpl;
+import com.cg.payroll.exceptions.AssociateDetailNotFoundException;
+
+public class PayrollServicesImpl implements PayrollServices {
+
+	
+		private AssociateDAO associateDao = new AssociateDAOImpl();
+
+	@Override
+	public int acceptAssociateDetails(String firstName, String lastName, String emailId, String department,
+			String designation, String panCard, int yearlyInvestmentUnder80C, int basicSalary, int epf, int companyPf,
+			int accountNumber, String bankName, String ifscCode) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int calculateNetSalary(int associateId) throws AssociateDetailNotFoundException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Associate getAssociateDetails(int associateId) throws AssociateDetailNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Associate> getAssociateDetails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.cg.mathproject.services;
+
+public interface MathServices {
+
+}

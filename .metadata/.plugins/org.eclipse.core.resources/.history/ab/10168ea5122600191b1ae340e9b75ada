@@ -1,0 +1,5 @@
+package com.cg.payroll.util;
+
+public class PayrollDBUtil {
+
+}

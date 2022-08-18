@@ -1,0 +1,111 @@
+package com.cg.banking.beans;
+
+public class DebitCard {
+	private double cardNo;
+	private String CardName;
+	private int cvv;
+	private int validFrom;
+	private int validThrough;
+	private String cardType;
+	public DebitCard() {}
+	public DebitCard(String cardName, String cardType) {
+		super();
+		CardName = cardName;
+		this.cardType = cardType;
+	}
+	public DebitCard(double cardNo, String cardName, int cvv, int validFrom, int validThrough, String cardType) {
+		super();
+		this.cardNo = cardNo;
+		CardName = cardName;
+		this.cvv = cvv;
+		this.validFrom = validFrom;
+		this.validThrough = validThrough;
+		this.cardType = cardType;
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((CardName == null) ? 0 : CardName.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(cardNo);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((cardType == null) ? 0 : cardType.hashCode());
+		result = prime * result + cvv;
+		result = prime * result + validFrom;
+		result = prime * result + validThrough;
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		DebitCard other = (DebitCard) obj;
+		if (CardName == null) {
+			if (other.CardName != null)
+				return false;
+		} else if (!CardName.equals(other.CardName))
+			return false;
+		if (Double.doubleToLongBits(cardNo) != Double.doubleToLongBits(other.cardNo))
+			return false;
+		if (cardType == null) {
+			if (other.cardType != null)
+				return false;
+		} else if (!cardType.equals(other.cardType))
+			return false;
+		if (cvv != other.cvv)
+			return false;
+		if (validFrom != other.validFrom)
+			return false;
+		if (validThrough != other.validThrough)
+			return false;
+		return true;
+	}
+	public double getCardNo() {
+		return cardNo;
+	}
+	public void setCardNo(double cardNo) {
+		this.cardNo = cardNo;
+	}
+	public String getCardName() {
+		return CardName;
+	}
+	public void setCardName(String cardName) {
+		CardName = cardName;
+	}
+	public int getCvv() {
+		return cvv;
+	}
+	public void setCvv(int cvv) {
+		this.cvv = cvv;
+	}
+	public int getValidFrom() {
+		return validFrom;
+	}
+	public void setValidFrom(int validFrom) {
+		this.validFrom = validFrom;
+	}
+	public int getValidThrough() {
+		return validThrough;
+	}
+	public void setValidThrough(int validThrough) {
+		this.validThrough = validThrough;
+	}
+	public String getCardType() {
+		return cardType;
+	}
+	public void setCardType(String cardType) {
+		this.cardType = cardType;
+	}
+	@Override
+	public String toString() {
+		return "DebitCard [cardNo=" + cardNo + ", CardName=" + CardName + ", cvv=" + cvv + ", validFrom=" + validFrom
+				+ ", validThrough=" + validThrough + ", cardType=" + cardType + "]";
+	}
+	
+	
+}

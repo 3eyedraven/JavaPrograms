@@ -1,0 +1,35 @@
+package com.cg.payroll.client;
+
+import java.util.Scanner;
+
+import com.cg.payroll.exceptions.AssociateDetailNotFoundException;
+import com.cg.payroll.services.PayrollServices;
+import com.cg.payroll.services.PayrollServicesImpl;
+
+public class MainClass {
+	
+	public double taxCalculator() {
+		
+	}
+
+	public static void main(String[] args) throws AssociateDetailNotFoundException {
+		PayrollServices services = new PayrollServicesImpl();
+		int associateId=services.acceptAssociateDetails("frank", "castle", "frank@gmail.com", "Human Resource", "Manager", "00", 100, 200, 50, 20, 8763, "Axis", "dsh23");
+				System.out.println("Associate id:-"+associateId);
+		System.out.println("Enter Associate's basic yearly salary, epf & company pf:");
+		Scanner sc=new Scanner(System.in);
+		double basic=sc.nextDouble();
+		double epf=sc.nextDouble();
+		double cpf=sc.nextDouble();
+		System.out.println("Associate's yearly net salary is:");
+		double netSalary=services.calculateNetSalary(basic,epf,cpf);
+		System.out.println(netSalary);
+		System.out.println("Associate's monthly net salary is: ");
+		System.out.println((float)netSalary/12);
+		System.out.println("Associate's monthly taxable amount is:");
+		double monthlyTax=taxCalculator(basic,epf,cpf);
+		System.out.println("Monthly Taxable amount is: ");
+		System.out.println(monthlyTax);
+	}
+
+}

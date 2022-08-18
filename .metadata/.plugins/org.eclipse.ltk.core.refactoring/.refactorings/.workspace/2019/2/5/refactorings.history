@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 30 resources" deleteContents="false" description="Delete 30 resources" element1="/AbstractClassProject" element10="/JavaStudentProject" element11="/Lab2" element12="/Lab2.3" element13="/Lab3.1" element14="/Lab3.2" element15="/Lab3.3" element16="/Lab3.4" element17="/Lab3.5" element18="/Lab3.6" element19="/Lab3.7" element2="/Employee" element20="/Lab3.8" element21="/Lab4" element22="/Lab5" element23="/Lab6.1" element24="/Lab7.1" element25="/Lab7.2" element26="/Lab7.3" element27="/Lab7.4" element28="/Meds" element29="/NewJavaProject" element3="/ExceptionProject" element30="/ObjectDemoProject" element4="/GetSetDemoProject" element5="/InheritanceProject" element6="/InheritenceDay4" element7="/JavaBasicProject" element8="/JavaBasicProject2" element9="/JavaBatProject" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="30" stamp="1549086349748"/>
+</session>

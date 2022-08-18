@@ -1,0 +1,42 @@
+package com.cg.banking.services;
+
+import java.util.List;
+
+import com.cg.banking.beans.Account;
+import com.cg.banking.beans.Transaction;
+import com.cg.banking.exceptions.AccountBlockedException;
+import com.cg.banking.exceptions.AccountNotFoundException;
+import com.cg.banking.exceptions.BankingServicesDownException;
+import com.cg.banking.exceptions.InsufficientAmountException;
+import com.cg.banking.exceptions.InvalidAccountTypeException;
+import com.cg.banking.exceptions.InvalidAmountException;
+import com.cg.banking.exceptions.InvalidPinNumberException;
+
+public interface BankingServices {
+	Account openAccount(String accName, String address, double mobileNo, String string, String nomineeName, String string2,
+			String string3, String accountType) 
+			throws InvalidAmountException,InvalidAccountTypeException,BankingServicesDownException;
+	
+	float depositAmount(long accountNo,float amount) 
+			throws AccountNotFoundException,BankingServicesDownException,AccountBlockedException;
+	
+	float withdrawAmount(long accountNo, float amount) 
+			throws InsufficientAmountException,AccountNotFoundException,InvalidPinNumberException,BankingServicesDownException,AccountBlockedException;
+	
+	float fundTransfer(long accountNo, float amount) 
+			throws InsufficientAmountException,AccountNotFoundException,InvalidPinNumberException,BankingServicesDownException,AccountBlockedException;
+	
+	Account getAccountDetails(long accountNo) 
+			throws AccountNotFoundException,BankingServicesDownException;
+	
+	List <Account> getAllAccountDetails() 
+			throws BankingServicesDownException;
+	
+	List <Transaction> getAccountAllTransaction(long accountNo) 
+			throws BankingServicesDownException,AccountNotFoundException;
+	
+	public String accountStatus(long accountNo) 
+			throws BankingServicesDownException,AccountNotFoundException,AccountBlockedException;
+	
+
+}

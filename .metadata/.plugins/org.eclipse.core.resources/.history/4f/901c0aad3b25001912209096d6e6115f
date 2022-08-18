@@ -1,0 +1,14 @@
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		
+		Integer num=new Integer(4);
+		Integer num2=new Integer(7);
+		num+=num2;
+		System.out.println(num);
+		
+
+	}
+
+}

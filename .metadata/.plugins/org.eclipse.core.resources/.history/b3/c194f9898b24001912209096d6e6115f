@@ -1,0 +1,8 @@
+package com.cg.payroll.beans;
+
+public class Salary {
+
+	private int basicSalary,hra,conveyenceAllowance;
+	private int otherAllowance,personalAllowance,monthlyTax,epf;
+	private int companyPf,grossSalary,netSalary;
+}

@@ -1,0 +1,5 @@
+package com.cg.project.beans;
+
+public class Address {
+	public Address(String string, String string2) {}
+}

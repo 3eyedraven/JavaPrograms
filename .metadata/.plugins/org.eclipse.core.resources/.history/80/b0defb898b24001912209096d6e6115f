@@ -1,0 +1,7 @@
+package com.cg.payroll.beans;
+
+public class BankDetails {
+
+	private int accountNumber;
+	private String bankName,ifscCode;
+}
